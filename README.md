@@ -31,7 +31,7 @@ the steps are simply:
 - Mount Samba Share inside of windows
 
 
-# Thoughts on this methodoly
+# Thoughts on this methodology
 - The reason why I'm using a linux VPS to server the data is to reduce the usage of the windows machine. This way the we can only consume the resources that we need to upload the data and prepare our project for rendering with using expensive GPU rental on the windows instance.
 - We can keep the data on the linux vps for later revisiting the same project, while terminating the GPU instance, we don't pay for the GPU when we are not using.
 - The data is served with Samba: windows compatible protocol for easy management.
