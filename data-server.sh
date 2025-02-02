@@ -226,27 +226,3 @@ EOF
 sudo docker compose up -d
 
 # all above is working
-
-# breaker
-# sFTP setup
-
-SHAREDIR=/mnt/store/sftp-samba
-
-sudo addgroup sftp
-sudo usermod -aG sftp $USER
-
-sudo tee -a /etc/ssh/sshd_config <<EOF
-Match group sftp
-ChrootDirectory $SHAREDIR
-X11Forwarding no
-AllowTcpForwarding no
-AllowAgentForwarding no
-ForceCommand internal-sftp
-EOF
-
-#sudo tee -a /etc/ssh/sshd_config <<EOF
-#PermitRootLogin no
-#PasswordAuthentication yes
-#EOF
-
-sudo systemctl restart ssh
