@@ -17,6 +17,8 @@ the file data-server.sh will prepare linux vps for being a data server. by the f
 - Install and setup Samba and create a samba share inside mounted folder named sftp-samba
 - Deploy FileBrowser with nginx and self-signed certs for secure HTTPS access to the folder from the internet. the server is accessible through port 443 on data the server ip.
 
+### Note:
+setup user credentials for FileBrowser on first run to secure the access to your data.
 
 # Automating windows instance deployment
 I've tried many time with powershell scripts that could be located in the ./drafts folder but could yet succeed to create a script that will automate the deployment of windows, setup DaVinci Resolve and mount the Samba share. any help on that matter is welcome.
@@ -36,3 +38,4 @@ the steps are simply:
 - We can keep the data on the linux vps for later revisiting the same project, while terminating the GPU instance, we don't pay for the GPU when we are not using.
 - The data is served with Samba: windows compatible protocol for easy management.
 - a Terraform file or any IaaS method would be a good idea to automate the provisioning of the required infrastructure would be a nice add-on
+- other methods to upload the data into the linux vps would be welcome, this way a user has the option to choose the best and most secure way in their opinion.
