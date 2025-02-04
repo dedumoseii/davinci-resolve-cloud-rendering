@@ -4,7 +4,7 @@ This project is an automated process for preparing the environment of a cloud re
 
 # How it works
 
-The approach is to create two cloud instances, one for the rendering and one for transfering and managing the material and the data going in and out of the rendering instance:
+The approach is to create a network and two cloud instances connected to it, one for the rendering and one for transfering and managing the material and the data going in and out of the rendering instance:
 
 - instance #1: a linux vps with 4 cores and 8 gigabytes of ram with attached block storage. This instance will serve a Samba share to be accessible from the render server and serve an HTTPS method (FileBrowser) for securely uploading files to the Samba share from the internet.
 
